@@ -1,4 +1,4 @@
-// ALIXIR App Landing Page - Interactive Effects
+// ALIXIR App Landing Page - Interactive Effects (Dark Theme)
 
 // Smooth scroll for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -22,42 +22,27 @@ window.addEventListener('scroll', () => {
     const currentScroll = window.pageYOffset;
 
     if (currentScroll > 100) {
-        navbar.style.background = 'rgba(255, 255, 255, 0.95)';
-        navbar.style.boxShadow = '0 4px 30px rgba(0, 0, 0, 0.1)';
+        navbar.style.background = 'rgba(10, 10, 10, 0.95)';
+        navbar.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.5)';
     } else {
-        navbar.style.background = 'rgba(255, 255, 255, 0.85)';
-        navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.05)';
+        navbar.style.background = 'rgba(10, 10, 10, 0.9)';
+        navbar.style.boxShadow = 'none';
     }
 
     lastScroll = currentScroll;
 });
 
-// Typewriter effect for hero title
-function typeWriter(element, text, speed = 100) {
-    let i = 0;
-    element.innerHTML = '';
-
-    function type() {
-        if (i < text.length) {
-            element.innerHTML += text.charAt(i);
-            i++;
-            setTimeout(type, speed);
-        }
-    }
-
-    type();
-}
-
-// Initialize typewriter effect when page loads
+// Initialize page with smooth fade-in
 window.addEventListener('load', () => {
-    const heroTitle = document.querySelector('.hero-title');
-    if (heroTitle) {
-        const title = heroTitle.innerHTML;
-        typeWriter(heroTitle, title, 80);
-    }
+    document.body.style.opacity = '0';
+    document.body.style.transition = 'opacity 0.5s ease';
+
+    setTimeout(() => {
+        document.body.style.opacity = '1';
+    }, 100);
 });
 
-// Intersection Observer for animations
+// Intersection Observer for scroll animations
 const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -50px 0px'
@@ -73,45 +58,14 @@ const observer = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 // Animate elements on scroll
-const animateElements = document.querySelectorAll('.feature-card, .gallery-item, .testimonial-card, .faq-item');
+const animateElements = document.querySelectorAll('.feature-card, .testimonial-card, .faq-item');
 
-animateElements.forEach(el => {
+animateElements.forEach((el, index) => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(30px)';
     el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    el.style.transitionDelay = `${index * 0.1}s`;
     observer.observe(el);
-});
-
-// Add floating animation to phone mockup
-const phoneMockup = document.querySelector('.phone-mockup');
-if (phoneMockup) {
-    phoneMockup.addEventListener('mouseenter', () => {
-        phoneMockup.style.animation = 'none';
-    });
-
-    phoneMockup.addEventListener('mouseleave', () => {
-        phoneMockup.style.animation = 'float 6s ease-in-out infinite';
-    });
-}
-
-// Mood chart animation
-const moodBars = document.querySelectorAll('.mood-bar');
-moodBars.forEach((bar, index) => {
-    setTimeout(() => {
-        bar.style.height = bar.style.height;
-    }, index * 200);
-});
-
-// Add hover effect to feature cards
-const featureCards = document.querySelectorAll('.feature-card');
-featureCards.forEach(card => {
-    card.addEventListener('mouseenter', () => {
-        card.style.transform = 'translateY(-12px) scale(1.02)';
-    });
-
-    card.addEventListener('mouseleave', () => {
-        card.style.transform = 'translateY(-8px) scale(1)';
-    });
 });
 
 // Interactive FAQ toggle
@@ -153,7 +107,7 @@ document.querySelectorAll('.cta-primary, .cta-secondary, .nav-cta').forEach(butt
             height: ${size}px;
             left: ${x}px;
             top: ${y}px;
-            background: rgba(255, 255, 255, 0.3);
+            background: rgba(255, 255, 255, 0.2);
             border-radius: 50%;
             transform: scale(0);
             animation: ripple 0.6s linear;
@@ -183,25 +137,58 @@ document.head.appendChild(style);
 // Parallax effect for hero section
 window.addEventListener('scroll', () => {
     const scrolled = window.pageYOffset;
-    const parallax = document.querySelector('.hero');
-    if (parallax) {
-        parallax.style.transform = `translateY(${scrolled * 0.5}px)`;
+    const hero = document.querySelector('.hero');
+    if (hero && scrolled < hero.offsetHeight) {
+        const heroGlow = document.querySelector('.hero-glow');
+        if (heroGlow) {
+            heroGlow.style.transform = `translate(-50%, -50%) translateY(${scrolled * 0.3}px)`;
+        }
     }
 });
 
-// Console greeting with ALIXIR theme
-console.log('%c 🌟 ALIXIR App 🌟 ', 'background: linear-gradient(135deg, #667eea 0%, #f093fb 50%, #fa709a 100%); color: white; padding: 10px 20px; border-radius: 30px; font-weight: bold; font-size: 1.2rem;');
-console.log('%c Your AI Emotional Companion ', 'color: #667eea; font-size: 1rem;');
+// Add hover effect to feature cards
+const featureCards = document.querySelectorAll('.feature-card');
+featureCards.forEach(card => {
+    card.addEventListener('mouseenter', () => {
+        card.style.transform = 'translateY(-12px)';
+    });
 
-// Add loading animation
-window.addEventListener('load', () => {
-    document.body.style.opacity = '0';
-    document.body.style.transition = 'opacity 0.5s ease';
-
-    setTimeout(() => {
-        document.body.style.opacity = '1';
-    }, 100);
+    card.addEventListener('mouseleave', () => {
+        card.style.transform = 'translateY(-8px)';
+    });
 });
+
+// Add hover effect to testimonial cards
+const testimonialCards = document.querySelectorAll('.testimonial-card');
+testimonialCards.forEach(card => {
+    card.addEventListener('mouseenter', () => {
+        card.style.transform = 'translateY(-12px)';
+    });
+
+    card.addEventListener('mouseleave', () => {
+        card.style.transform = 'translateY(-8px)';
+    });
+});
+
+// Platform item interactions
+const platformItems = document.querySelectorAll('.platform-item');
+platformItems.forEach(item => {
+    item.addEventListener('mouseenter', () => {
+        if (!item.classList.contains('coming-soon')) {
+            item.style.transform = 'translateY(-4px) scale(1.02)';
+        }
+    });
+
+    item.addEventListener('mouseleave', () => {
+        if (!item.classList.contains('coming-soon')) {
+            item.style.transform = 'translateY(0) scale(1)';
+        }
+    });
+});
+
+// Console greeting with ALIXIR dark theme
+console.log('%c ◆ ALIXIR App ◆ ', 'background: linear-gradient(135deg, #7c3aed 0%, #6366f1 50%, #8b5cf6 100%); color: white; padding: 12px 24px; border-radius: 30px; font-weight: bold; font-size: 1.2rem; font-family: monospace;');
+console.log('%c Your AI Emotional Companion ', 'color: #8b5cf6; font-size: 1rem;');
 
 // Analytics tracking (placeholder)
 function trackEvent(eventName, data = {}) {
@@ -215,5 +202,13 @@ document.querySelectorAll('.cta-primary, .cta-secondary, .nav-cta').forEach(butt
         const buttonType = button.classList.contains('cta-primary') ? 'primary' : 'secondary';
         const buttonText = button.textContent.trim();
         trackEvent('cta_click', { type: buttonType, text: buttonText });
+    });
+});
+
+// Track platform interactions
+document.querySelectorAll('.platform-item').forEach(item => {
+    item.addEventListener('click', () => {
+        const platform = item.querySelector('.platform-name').textContent;
+        trackEvent('platform_click', { platform: platform });
     });
 });
