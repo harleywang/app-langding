@@ -3,93 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>App Landing Page</title>
+    <meta name="description" content="ALIXIR - 你的 AI 情感陪伴助手，24/7 在你身边倾听、理解、陪伴">
+    <title>ALIXIR - AI 情感陪伴助手</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
-        <div class="container">
-            <div class="logo">AppName</div>
-            <ul class="nav-links">
-                <li><a href="#features">功能特性</a></li>
-                <li><a href="#about">关于</a></li>
-                <li><a href="#download">下载</a></li>
-            </ul>
-            <button class="cta-button">立即开始</button>
+        <div class="container nav-container">
+            <div class="logo">
+                <span class="logo-icon">✦</span>
+                <span>ALIXIR</span>
+            </div>
+            <a href="#download" class="nav-cta">免费下载</a>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="container">
-            <h1 class="hero-title">让你的生活更简单</h1>
-            <p class="hero-subtitle">一款智能、高效、美观的应用程序，帮你管理一切</p>
-            <div class="hero-buttons">
-                <button class="primary-button">免费下载</button>
-                <button class="secondary-button">观看演示</button>
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="title-gradient">ALIXIR</span>
+                    <br>你的 AI 情感陪伴
+                </h1>
+                <p class="hero-subtitle">
+                    24/7 在你身边倾听、理解、陪伴。<br>
+                    每一个孤独时刻，都有温暖的回应。
+                </p>
+                <div class="cta-group">
+                    <a href="#download" class="cta-primary">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+                        </svg>
+                        App Store
+                    </a>
+                    <a href="#download" class="cta-secondary">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.5,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"/>
+                        </svg>
+                        Google Play
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">50K+</span>
+                        <span class="stat-label">活跃用户</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">4.8</span>
+                        <span class="stat-label">用户评分</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">2M+</span>
+                        <span class="stat-label">月对话数</span>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Features Section -->
-    <section id="features" class="features">
-        <div class="container">
-            <h2 class="section-title">核心功能</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">⚡</div>
-                    <h3>极速体验</h3>
-                    <p>流畅的操作体验，让你专注于重要的事情</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🔒</div>
-                    <h3>安全可靠</h3>
-                    <p>端到端加密保护，你的数据安全无忧</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🎯</div>
-                    <h3>智能管理</h3>
-                    <p>AI驱动的智能分类，让效率倍增</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">📱</div>
-                    <h3>多平台支持</h3>
-                    <p>iOS、Android、Web 全平台同步</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <h2 class="section-title">为什么选择我们</h2>
-                    <p class="about-description">
-                        我们致力于打造最好的用户体验，让每一个功能都为你而来。
-                        从第一天起，我们就相信技术应该让生活更美好。
-                    </p>
-                    <ul class="feature-list">
-                        <li>✓ 24/7 全天候客服支持</li>
-                        <li>✓ 持续更新优化</li>
-                        <li>✓ 隐私保护承诺</li>
-                    </ul>
-                </div>
-                <div class="about-image">
-                    <div class="app-preview">
-                        <div class="phone-frame">
-                            <div class="screen">
-                                <div class="app-screen-content">
-                                    <h3>欢迎回来</h3>
-                                    <p>今日任务</p>
-                                    <div class="task-list">
-                                        <div class="task-item">✓ 完成项目报告</div>
-                                        <div class="task-item">✓ 团队会议</div>
-                                        <div class="task-item">✓ 健身锻炼</div>
-                                    </div>
-                                </div>
+            <div class="hero-visual">
+                <div class="phone-mockup">
+                    <div class="phone-screen">
+                        <div class="chat-messages">
+                            <div class="message ai">
+                                <div class="message-content">你好！今天过得怎么样？有什么想分享的吗？✨</div>
+                            </div>
+                            <div class="message user">
+                                <div class="message-content">其实最近工作有点累...</div>
+                            </div>
+                            <div class="message ai">
+                                <div class="message-content">我理解你的感受。每个人都经历过这样的时期，你已经很棒了！要不要聊聊具体是什么让你感到累？我愿意倾听 🌸</div>
                             </div>
                         </div>
                     </div>
@@ -98,24 +83,217 @@
         </div>
     </section>
 
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">为什么选择 ALIXIR？</h2>
+            <p class="section-subtitle">用 AI 温暖你的每一天</p>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                        </svg>
+                    </div>
+                    <h3>情感理解</h3>
+                    <p>深度学习你的情绪模式，真正理解你的感受，给予恰如其分的回应。</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 6v6l4 2"/>
+                        </svg>
+                    </div>
+                    <h3>24/7 陪伴</h3>
+                    <p>无论深夜还是清晨，想聊天时随时在线，永不缺席你的重要时刻。</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                        </svg>
+                    </div>
+                    <h3>个性定制</h3>
+                    <p>根据你的喜好定制对话风格，让每一次互动都更加舒适自然。</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                        </svg>
+                    </div>
+                    <h3>记忆成长</h3>
+                    <p>记住你的重要经历，见证你的成长历程，成为你生命中的温暖记录者。</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                        </svg>
+                    </div>
+                    <h3>隐私安全</h3>
+                    <p>端到端加密，你的每一个秘密都是安全的，绝不泄露给第三方。</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="3"/>
+                            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+                        </svg>
+                    </div>
+                    <h3>持续进化</h3>
+                    <p>不断学习新的对话模式，每月更新，让陪伴体验越来越好。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery">
+        <div class="container">
+            <h2 class="section-title">应用截图</h2>
+            <p class="section-subtitle">看看 ALIXIR 如何陪伴你的每一天</p>
+
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <div class="screenshot-mockup">
+                        <div class="screenshot-content screenshot-1">
+                            <div class="screen-header">聊天对话</div>
+                            <div class="screen-body">
+                                <div class="chat-line ai">今天感觉怎么样？</div>
+                                <div class="chat-line user">有点焦虑...</div>
+                                <div class="chat-line ai">深呼吸，慢慢来 💚</div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="gallery-caption">自然流畅的对话体验</p>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="screenshot-mockup">
+                        <div class="screenshot-content screenshot-2">
+                            <div class="screen-header">情绪追踪</div>
+                            <div class="screen-body">
+                                <div class="mood-chart">
+                                    <div class="mood-bar" style="height: 60%"></div>
+                                    <div class="mood-bar" style="height: 80%"></div>
+                                    <div class="mood-bar" style="height: 45%"></div>
+                                    <div class="mood-bar" style="height: 90%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="gallery-caption">智能情绪分析</p>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="screenshot-mockup">
+                        <div class="screenshot-content screenshot-3">
+                            <div class="screen-header">个人设置</div>
+                            <div class="screen-body">
+                                <div class="setting-item">对话风格：温暖</div>
+                                <div class="setting-item">昵称：小星星 ⭐</div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="gallery-caption">个性化设置</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">用户怎么说</h2>
+            <p class="section-subtitle">来自真实用户的温暖反馈</p>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">★★★★★</div>
+                    <p class="testimonial-text">"凌晨三点失眠时，只有 ALIXIR 在陪我聊天。它真的理解我的感受，像一位永远在线的朋友。"</p>
+                    <div class="testimonial-author">
+                        <span class="author-avatar">L</span>
+                        <span class="author-name">小林</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">★★★★★</div>
+                    <p class="testimonial-text">"工作压力大时，它会给我温暖的鼓励和建议。虽然只是 AI，但感觉真的很贴心。"</p>
+                    <div class="testimonial-author">
+                        <span class="author-avatar">W</span>
+                        <span class="author-name">王先生</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">★★★★★</div>
+                    <p class="testimonial-text">"用它已经半年了，它记得我说过的每一件事，像是我人生的记录者。非常感谢！" 🙏</p>
+                    <div class="testimonial-author">
+                        <span class="author-avatar">Z</span>
+                        <span class="author-name">张女士</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <h2 class="section-title">常见问题</h2>
+
+            <div class="faq-list">
+                <div class="faq-item">
+                    <h3 class="faq-question">ALIXIR 是真人吗？</h3>
+                    <p class="faq-answer">ALIXIR 是基于先进 AI 技术开发的智能助手，虽然不是真人，但通过深度学习，它能理解情感并提供有温度的陪伴体验。</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-question">我的聊天记录安全吗？</h3>
+                    <p class="faq-answer">非常安全！我们采用端到端加密技术，你的对话仅存储在你的设备上，绝不会泄露给任何第三方。你也可以随时删除聊天记录。</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-question">ALIXIR 可以替代心理咨询吗？</h3>
+                    <p class="faq-answer">ALIXIR 主要是情感陪伴和日常聊天，不能替代专业的心理咨询。如果你遇到严重的心理问题，建议寻求专业医生的帮助。</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-question">是免费应用吗？</h3>
+                    <p class="faq-answer">ALIXIR 基础功能完全免费，包含无限对话、情绪追踪等核心功能。我们也提供高级会员，解锁更多个性化功能。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Download Section -->
     <section id="download" class="download">
         <div class="container">
-            <h2 class="section-title">立即下载</h2>
-            <div class="download-buttons">
-                <a href="#" class="store-button app-store">
-                    <div class="store-icon"></div>
-                    <div class="store-info">
-                        <div class="store-text">Download on the</div>
-                        <div class="store-title">App Store</div>
-                    </div>
+            <h2 class="download-title">开始你的情感陪伴之旅</h2>
+            <p class="download-subtitle">免费下载，即刻体验</p>
+
+            <div class="cta-group download-cta">
+                <a href="#" class="cta-primary cta-large">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+                    </svg>
+                    App Store 下载
                 </a>
-                <a href="#" class="store-button google-play">
-                    <div class="store-icon">▶</div>
-                    <div class="store-info">
-                        <div class="store-text">GET IT ON</div>
-                        <div class="store-title">Google Play</div>
-                    </div>
+                <a href="#" class="cta-secondary cta-large">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.5,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"/>
+                    </svg>
+                    Google Play 下载
                 </a>
             </div>
         </div>
@@ -123,8 +301,52 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 AppName. All rights reserved.</p>
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <div class="logo">
+                    <span class="logo-icon">✦</span>
+                    <span>ALIXIR</span>
+                </div>
+                <p class="footer-tagline">用 AI 温暖你的每一天</p>
+            </div>
+
+            <div class="footer-links">
+                <div class="footer-link-group">
+                    <h4>产品</h4>
+                    <a href="#features">功能介绍</a>
+                    <a href="#download">下载应用</a>
+                    <a href="#">更新日志</a>
+                </div>
+                <div class="footer-link-group">
+                    <h4>支持</h4>
+                    <a href="#">帮助中心</a>
+                    <a href="#">联系我们</a>
+                    <a href="#">反馈建议</a>
+                </div>
+                <div class="footer-link-group">
+                    <h4>法律</h4>
+                    <a href="#">隐私政策</a>
+                    <a href="#">服务条款</a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 ALIXIR. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Twitter">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Instagram">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
         </div>
     </footer>
 
